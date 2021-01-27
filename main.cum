@@ -1,5 +1,12 @@
 initdrip:
+    mov si, dripmansplash
+    call printf
+    jmp powerush
 
 
 
-dripmansplash: db 10, 13, 'Initialized dripman version 1.0.1-beta', 10, 13
+dripmansplash: db 10, 13, 'Initialized dripman version 1.0.1-beta', 10, 13, 0
+
+
+; Include dripman dependencies
+%include "./dripman/modules/printf.pog"
